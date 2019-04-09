@@ -1,5 +1,7 @@
 package section2;
 
+import java.awt.Color;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class FlamingNinjaStar {
@@ -8,6 +10,19 @@ public class FlamingNinjaStar {
 
 		int baseSize = 300;		//the size of the black part of the star
 		int flameSize = 200;		//the length of the flaming arms
+		Robot bob = new Robot();
+		bob.setSpeed(100);
+		bob.penDown();
+		bob.turn(360/8);
+		bob.move(64);
+		bob.turn(-40);
+		bob.setPenColor(Color.ORANGE);
+		bob.move(flameSize);
+		bob.turn(170);
+		bob.move(flameSize);
+		bob.turn(64);
+		bob.setPenColor(Color.BLACK);
+		bob.move(baseSize);
 		
 		// 1. Make a new robot, and set it's pen down.
 
